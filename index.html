@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Meu Spotify</title>
+  <!-- Roboto: fonte moderna -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+  <!-- Copilot: header fixo com menu, busca e alternador de tema -->
+  <header class="topo">
+    <div class="container-topo">
+      <nav class="menu">
+        <a href="#inicio" class="logo">Meu Spotify</a>
+        <ul class="links">
+          <li><a href="#inicio" data-target="inicio">Início</a></li>
+          <li><a href="#destaques" data-target="destaques">Destaques</a></li>
+          <li><a href="#pop" data-target="pop">Pop & R&B</a></li>
+          <li><a href="#rap" data-target="rap">Rap & Trap</a></li>
+          <li><a href="#gospel" data-target="gospel">Gospel</a></li>
+          <li><a href="#futebol" data-target="futebol">Futebol</a></li>
+          <li><a href="#favoritos" data-target="favoritos">Favoritos</a></li>
+        </ul>
+      </nav>
+
+      <!-- Copilot: área de busca e controles -->
+      <div class="controles-topo">
+        <div class="busca">
+          <span class="icone-lupa">🔍</span>
+          <input id="campo-busca" type="search" placeholder="Buscar músicas ou artistas..." aria-label="Buscar músicas ou artistas">
+        </div>
+
+        <button id="btn-tema" class="btn-tema" aria-label="Alternar tema">🌗</button>
+        <a class="btn-perfil" href="perfil.html" aria-label="Perfil do usuário">Perfil</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- Copilot: Carrossel de destaques -->
+    <section id="destaques" class="secao-destaques">
+      <div class="carrossel">
+        <button class="carrossel-prev" aria-label="Anterior">◀</button>
+        <div class="carrossel-track" id="carrossel-track" role="region" aria-roledescription="carrossel"></div>
+        <button class="carrossel-next" aria-label="Próximo">▶</button>
+      </div>
+    </section>
+
+    <!-- Copilot: seção Pop & R&B -->
+    <section id="pop" class="secao-categoria">
+      <h2>Pop & R&B</h2>
+      <div id="lista-pop" class="lista-de-musicas"></div>
+    </section>
+
+    <!-- Copilot: seção Rap & Trap -->
+    <section id="rap" class="secao-categoria">
+      <h2>Rap & Trap</h2>
+      <div id="lista-rap" class="lista-de-musicas"></div>
+    </section>
+
+    <!-- Copilot: seção Gospel -->
+    <section id="gospel" class="secao-categoria">
+      <h2>Gospel / Música Cristã</h2>
+      <div id="lista-gospel" class="lista-de-musicas"></div>
+    </section>
+
+    <!-- Copilot: seção de futebol (nova) -->
+    <section id="futebol" class="secao-futebol">
+      <h2>Músicas - Tema Futebol</h2>
+      <div id="lista-futebol" class="lista-de-musicas"></div>
+    </section>
+
+    <!-- Copilot: lista principal de todas as músicas -->
+    <section id="todas" class="secao-musicas">
+      <h2>Todas as Músicas</h2>
+      <div id="lista-de-musicas" class="lista-de-musicas"></div>
+    </section>
+
+    <!-- Copilot: seção de favoritos (preenchida via JS) -->
+    <section id="favoritos" class="secao-favoritos">
+      <h2>Favoritos</h2>
+      <div id="lista-de-favoritos" class="lista-de-musicas"></div>
+    </section>
+  </main>
+
+  <!-- Copilot: rodapé com créditos -->
+  <footer class="rodape">
+    Site criado por Tiago © 2025 – Projeto Do Zero ao Deploy
+  </footer>
+
+  <!-- Copilot: script principal que renderiza os cards dinamicamente e adiciona interatividade -->
+  <script src="app.js" defer></script>
+</body>
+</html>

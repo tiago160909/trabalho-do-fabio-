@@ -1,0 +1,27 @@
+O que é Git e GitHub?
+
+Git é um sistema de controle de versão distribuído que registra mudanças em arquivos ao longo do tempo. Permite voltar a estados anteriores, criar ramificações e trabalhar de forma colaborativa.
+
+GitHub é uma plataforma online que hospeda repositórios Git, facilita compartilhamento, revisão de código (pull requests), issues e integrações de CI/CD.
+
+O que é uma "branch"? Por que usamos "desenvolvimento"?
+
+Uma branch (ramo) é uma linha paralela de desenvolvimento no repositório. Usamos a branch "desenvolvimento" para isolar mudanças em progresso do código estável (por exemplo, da branch principal "main" ou "master"). Isso permite testar e revisar antes de unir no ramo de produção.
+
+O que é "deploy"? O que a Vercel faz?
+
+Deploy é o processo de publicar uma versão do seu site ou aplicação em um servidor público para que usuários possam acessá-la pela internet. A Vercel automatiza o deploy de sites estáticos e aplicações front-end, integrando-se ao GitHub para gerar builds e publicar automaticamente quando há pushes na branch configurada.
+
+O que é "CI/CD" e o que acontece quando damos novo "push"?
+
+CI (Integração Contínua) executa automaticamente tarefas como testes e builds quando o código é alterado. CD (Entrega/Deploy Contínuo) automatiza o envio das alterações para um ambiente (staging/produção). Ao dar um "push" para a branch configurada na Vercel, a plataforma inicia um build e, se tudo passar, publica a nova versão do site.
+
+Resumo de passos recomendados (em ordem):
+- Criar repositório no GitHub e clonar na máquina.
+- Criar e mudar para a branch "desenvolvimento".
+- Fazer commits organizados: "HTML base criado", "CSS estilo Spotify adicionado", "JS interativo implementado".
+- Push da branch "desenvolvimento" para o GitHub.
+- No Vercel: importar o repositório, selecionar a branch "desenvolvimento" como Production Branch e clicar em Deploy.
+- Para testar CI/CD: modificar algo simples (ex.: alterar cor de fundo), commit + push e verificar o deploy automático.
+
+Arquivo criado: explicacao.txt

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perfil - Meu Spotify</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+  <header class="topo">
+    <div class="container-topo">
+      <a href="index.html" class="logo">Meu Spotify</a>
+    </div>
+  </header>
+
+  <main style="padding:120px 24px 40px; max-width:900px; margin:0 auto;">
+    <section class="perfil">
+      <h2>Perfil do Usuário</h2>
+      <div style="display:flex; gap:16px; align-items:center; margin-bottom:20px">
+        <img src="https://images.unsplash.com/photo-1545996124-1b6dffb03d5f?q=80&w=200&auto=format&fit=crop&ixlib=rb-4.0.3&s=8" alt="Avatar" style="width:96px;height:96px;border-radius:50%">
+        <div>
+          <div style="font-weight:700">Usuário Exemplo</div>
+          <div style="color:rgba(255,255,255,0.7)">usuario@example.com</div>
+        </div>
+      </div>
+
+      <h3>Suas músicas favoritas</h3>
+      <div id="favoritos-perfil" class="lista-de-musicas"></div>
+
+      <div style="margin-top:20px"><a href="index.html" class="btn-perfil">Voltar ao início</a></div>
+    </section>
+  </main>
+
+  <script>
+    // Copilot: Carrega favoritos do localStorage e mostra no perfil
+    const favs = JSON.parse(localStorage.getItem('fav_musicas') || '[]');
+    const todas = (typeof musicas !== 'undefined') ? musicas : [];
+    const futebol = (typeof musicasFutebol !== 'undefined') ? musicasFutebol : [];
+    const combinadas = todas.concat(futebol);
+
+    const container = document.getElementById('favoritos-perfil');
+    if(favs.length === 0) container.innerHTML = '<p>Nenhum favorito ainda.</p>';
+    combinadas.filter(m => favs.includes(m.id)).forEach((m) => {
+      const div = document.createElement('div');
+      div.className = 'card';
+      div.innerHTML = `
+        <img class="capa" src="${m.capaUrl}" alt="${m.titulo}">
+        <div class="info">
+          <div class="titulo">${m.titulo}</div>
+          <div class="artista">${m.artista}</div>
+        </div>
+      `;
+      container.appendChild(div);
+    });
+  </script>
+</body>
+</html>
