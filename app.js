@@ -241,6 +241,58 @@ function initNavegacao(){
   });
 }
 
+// Sugestões de busca (apenas músicas Gospel)
+function initSugestoes(){
+  const campo = document.getElementById('campo-busca');
+  const container = document.getElementById('sugestoes');
+
+  function mostrarSugestoes(texto){
+    const t = (texto || '').toLowerCase();
+    const sugestoes = musicas.filter(m => m.categoria && m.categoria.toLowerCase().includes('gospel'))
+      .filter(m => m.titulo.toLowerCase().includes(t) || m.artista.toLowerCase().includes(t));
+
+    container.innerHTML = '';
+    if(sugestoes.length === 0){ container.classList.remove('show'); container.setAttribute('aria-hidden','true'); return; }
+
+    sugestoes.forEach(m => {
+      const item = document.createElement('div');
+      item.className = 'sugestao-item';
+      item.innerHTML = `
+        <img class="sugestao-thumb" src="${m.capaUrl}" alt="${m.titulo}">
+        <div class="sugestao-info">
+          <div class="sugestao-titulo">${m.titulo}</div>
+          <div class="sugestao-artista">${m.artista}</div>
+        </div>
+      `;
+
+      item.addEventListener('click', () => {
+        // destacar visualmente a música selecionada
+        document.querySelectorAll('.sugestao-item').forEach(si => si.classList.remove('selecionada'));
+        item.classList.add('selecionada');
+        container.classList.remove('show');
+        container.setAttribute('aria-hidden','true');
+
+        // efeito visual: localizar e aplicar destaque no card correspondente
+        const alvo = Array.from(document.querySelectorAll('.card')).find(c => c.querySelector('.titulo').textContent === m.titulo && c.querySelector('.artista').textContent === m.artista);
+        if(alvo){
+          alvo.scrollIntoView({behavior:'smooth', block:'center'});
+          alvo.classList.add('tocando');
+          setTimeout(() => alvo.classList.remove('tocando'), 3000);
+        }
+      });
+
+      container.appendChild(item);
+    });
+
+    container.classList.add('show');
+    container.setAttribute('aria-hidden','false');
+  }
+
+  campo.addEventListener('focus', () => mostrarSugestoes(campo.value));
+  campo.addEventListener('input', (e) => mostrarSugestoes(e.target.value));
+  document.addEventListener('click', (e) => { if(!campo.contains(e.target) && !container.contains(e.target)) { container.classList.remove('show'); container.setAttribute('aria-hidden','true'); } });
+}
+
 // Inicialização geral
 function init(){
   renderCarrossel();
@@ -254,6 +306,9 @@ function init(){
   // Eventos de busca
   const campo = document.getElementById('campo-busca');
   campo.addEventListener('input', (e) => aplicarFiltro(e.target.value));
+
+  // Sugestões
+  initSugestoes();
 
   // Tema
   document.getElementById('btn-tema').addEventListener('click', toggleTema);
