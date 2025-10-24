@@ -1,32 +1,34 @@
-// Copilot: dados das músicas organizadas por categorias
-const musicasPop = [
-  { id:1, titulo: 'Talking to the Moon', artista: 'Bruno Mars', capaUrl: 'https://i.scdn.co/image/ab67616d0000b2734a3b4e5c8f2d4f67b8e2d3f7', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3' },
-  { id:2, titulo: 'Treasure', artista: 'Bruno Mars', capaUrl: 'https://i.scdn.co/image/ab67616d0000b2730a2b4b6b9c8d7e6f5a3b1c2d', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3' },
-  { id:3, titulo: 'No Tears Left To Cry', artista: 'Ariana Grande', capaUrl: 'https://i.scdn.co/image/ab67616d0000b273e3f4e5d6c7b8a9f0b1c2d3e4', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' }
+// Copilot: lista única de músicas com categorias, ids e links de capa
+const musicas = [
+  // Pop & R&B
+  { id: 1, titulo: 'Talking to the Moon', artista: 'Bruno Mars', capaUrl: 'https://tse2.mm.bing.net/th/id/OIP.QWJREtFa8JWFQUIdwGxKkwHaE8?rs=1&pid=ImgDetMain&o=7', categoria: 'Pop & R&B', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3' },
+  { id: 2, titulo: 'Treasure', artista: 'Bruno Mars', capaUrl: 'https://tse2.mm.bing.net/th/id/OIP.QWJREtFa8JWFQUIdwGxKkwHaE8?rs=1&pid=ImgDetMain&o=7', categoria: 'Pop & R&B', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3' },
+  { id: 3, titulo: 'No Tears Left To Cry', artista: 'Ariana Grande', capaUrl: 'https://th.196dc589aff67f24d233b5fb8902023c?rik=hSzfN%2bFqJJYuAg&riu=http%3a%2f%2fimages6.fanpop.com%2fimage%2fphotos%2f43200000%2fAri-ariana-grande-43254520-400-600.jpg', categoria: 'Pop & R&B', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' },
+
+  // Rap & Trap
+  { id: 4, titulo: 'SICKO MODE', artista: 'Travis Scott', capaUrl: 'https://www.rollingstone.com/wp-content/uploads/2019/10/TravisScott.jpg', categoria: 'Rap & Trap', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' },
+  { id: 5, titulo: 'Goosebumps', artista: 'Travis Scott ft. Kendrick Lamar', capaUrl: 'https://www.rollingstone.com/wp-content/uploads/2019/10/TravisScott.jpg', categoria: 'Rap & Trap', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3' },
+  { id: 6, titulo: 'In da Club', artista: '50 Cent', capaUrl: 'https://i.scdn.co/image/dd031b9c5d1b6eba4a691cd89c954255aae787f2', categoria: 'Rap & Trap', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3' },
+  { id: 7, titulo: 'Candy Shop', artista: '50 Cent', capaUrl: 'https://i.scdn.co/image/dd031b9c5d1b6eba4a691cd89c954255aae787f2', categoria: 'Rap & Trap', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3' },
+
+  // Gospel / Música Cristã
+  { id: 8, titulo: 'Ousado Amor', artista: 'Isaías Saad', capaUrl: 'https://th.bing.com/th/id/R.13803851f0b2cf3fbee284b3fc7e48e0?rik=9ZievHBSdc0kgw&pid=ImgRaw&r=0', categoria: 'Gospel / Música Cristã', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3' },
+  { id: 9, titulo: 'Ninguém Explica Deus', artista: 'Preto no Branco ft. Gabriela Rocha', capaUrl: 'https://web.portalsucesso.com.br/wp-content/uploads/2018/08/preto-no-branco.png', categoria: 'Gospel / Música Cristã', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3' },
+  { id: 10, titulo: 'Oceans (Where Feet May Fail)', artista: 'Hillsong UNITED', capaUrl: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80&auto=format&fit=crop', categoria: 'Gospel / Música Cristã', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3' },
+  { id: 11, titulo: 'Rei Eterno', artista: 'Diante do Trono', capaUrl: 'https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&q=80&auto=format&fit=crop', categoria: 'Gospel / Música Cristã', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3' },
+  { id: 12, titulo: 'Aquele Que Nos Chama', artista: 'Fernandinho', capaUrl: 'https://akamai.sscdn.co/gcs/cifra-blog/pt/wp-content/uploads/2023/11/0afa757-historia-de-fernandinho.jpg', categoria: 'Gospel / Música Cristã', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3' },
+
+  // Futebol / Temas de Copa
+  { id: 13, titulo: 'Waka Waka (This Time for Africa)', artista: 'Shakira', capaUrl: 'https://tse1.mm.bing.net/th/id/OIP.-i0hGAS4iNwDcg844eyCWwHaEt?rs=1&pid=ImgDetMain&o=7', categoria: 'Futebol', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' },
+  { id: 14, titulo: 'Live It Up', artista: 'Nicky Jam ft. Will Smith & Era Istrefi', capaUrl: 'https://i.ytimg.com/vi/_OYs3mecLQc/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGDMgWCh_MA8=&rs=AOn4CLAxyU6NwD5AMfA0Qkhp6TTwc0T-yw', categoria: 'Futebol', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3' }
 ];
 
-const musicasRap = [
-  { id:10, titulo: 'SICKO MODE', artista: 'Travis Scott', capaUrl: 'https://i.scdn.co/image/ab67616d0000b273d4b5f4f6e7a8b9c0d1e2f3a4', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' },
-  { id:11, titulo: 'Goosebumps', artista: 'Travis Scott ft. Kendrick Lamar', capaUrl: 'https://i.scdn.co/image/ab67616d0000b273c3d4e5f6a7b8c9d0e1f2a3b4', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3' },
-  { id:12, titulo: 'In da Club', artista: '50 Cent', capaUrl: 'https://i.scdn.co/image/ab67616d0000b273b2c3d4e5f6a7b8c9d0e1f2b3', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3' },
-  { id:13, titulo: 'Candy Shop', artista: '50 Cent', capaUrl: 'https://i.scdn.co/image/ab67616d0000b273a1b2c3d4e5f6a7b8c9d0e1a2', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3' }
-];
-
-const musicasGospel = [
-  { id:20, titulo: 'Ousado Amor', artista: 'Isaías Saad', capaUrl: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=6', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3' },
-  { id:21, titulo: 'Ninguém Explica Deus', artista: 'Preto no Branco ft. Gabriela Rocha', capaUrl: 'https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=7', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3' },
-  { id:22, titulo: 'Oceans (Where Feet May Fail)', artista: 'Hillsong UNITED', capaUrl: 'https://i.scdn.co/image/ab67616d0000b273f1e2d3c4b5a6f7e8d9c0b1a2', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3' },
-  { id:23, titulo: 'Rei Eterno', artista: 'Diante do Trono', capaUrl: 'https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=9', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3' },
-  { id:24, titulo: 'Aquele Que Nos Chama', artista: 'Fernandinho', capaUrl: 'https://images.unsplash.com/photo-1529257414773-19602a5b0d36?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=10', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3' }
-];
-
-const musicasFutebol = [
-  { id:101, titulo: 'Waka Waka (This Time for Africa)', artista: 'Shakira', capaUrl: 'https://i.scdn.co/image/ab67616d0000b2731f2e3d4c5b6a7e8d9c0b1a2b', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' },
-  { id:102, titulo: 'Live It Up', artista: 'Nicky Jam ft. Will Smith & Era Istrefi', capaUrl: 'https://i.scdn.co/image/ab67616d0000b2732a3b4c5d6e7f8a9b0c1d2e3f', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3' }
-];
-
-// Combinadas para busca e seção 'Todas as Músicas'
-const todasMusicas = musicasPop.concat(musicasRap, musicasGospel, musicasFutebol);
+// Categorias derivadas automaticamente
+const musicasPop = musicas.filter(m => m.categoria === 'Pop & R&B');
+const musicasRap = musicas.filter(m => m.categoria === 'Rap & Trap');
+const musicasGospel = musicas.filter(m => m.categoria === 'Gospel / Música Cristã');
+const musicasFutebol = musicas.filter(m => m.categoria === 'Futebol');
+const todasMusicas = musicas.slice();
 
 // Estado
 let favoritos = JSON.parse(localStorage.getItem('fav_musicas') || '[]');
