@@ -3,7 +3,7 @@ const musicas = [
   // Pop & R&B
   { id: 1, titulo: 'Talking to the Moon', artista: 'Bruno Mars', capaUrl: 'https://tse2.mm.bing.net/th/id/OIP.QWJREtFa8JWFQUIdwGxKkwHaE8?rs=1&pid=ImgDetMain&o=7', categoria: 'Pop & R&B', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3' },
   { id: 2, titulo: 'Treasure', artista: 'Bruno Mars', capaUrl: 'https://tse2.mm.bing.net/th/id/OIP.QWJREtFa8JWFQUIdwGxKkwHaE8?rs=1&pid=ImgDetMain&o=7', categoria: 'Pop & R&B', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3' },
-  { id: 3, titulo: 'No Tears Left To Cry', artista: 'Ariana Grande', capaUrl: 'https://th.196dc589aff67f24d233b5fb8902023c?rik=hSzfN%2bFqJJYuAg&riu=http%3a%2f%2fimages6.fanpop.com%2fimage%2fphotos%2f43200000%2fAri-ariana-grande-43254520-400-600.jpg', categoria: 'Pop & R&B', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' },
+  { id: 3, titulo: 'No Tears Left To Cry', artista: 'Ariana Grande', capaUrl: 'https://tse1.mm.bing.net/th/id/OIP.dJBEkCXDDdLQM0PHvmxN0QHaEK?rs=1&pid=ImgDetMain&o=7&rm=3', categoria: 'Pop & R&B', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' },
 
   // Rap & Trap
   { id: 4, titulo: 'SICKO MODE', artista: 'Travis Scott', capaUrl: 'https://www.rollingstone.com/wp-content/uploads/2019/10/TravisScott.jpg', categoria: 'Rap & Trap', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' },
@@ -20,7 +20,26 @@ const musicas = [
 
   // Futebol / Temas de Copa
   { id: 13, titulo: 'Waka Waka (This Time for Africa)', artista: 'Shakira', capaUrl: 'https://tse1.mm.bing.net/th/id/OIP.-i0hGAS4iNwDcg844eyCWwHaEt?rs=1&pid=ImgDetMain&o=7', categoria: 'Futebol', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3' },
-  { id: 14, titulo: 'Live It Up', artista: 'Nicky Jam ft. Will Smith & Era Istrefi', capaUrl: 'https://i.ytimg.com/vi/_OYs3mecLQc/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGDMgWCh_MA8=&rs=AOn4CLAxyU6NwD5AMfA0Qkhp6TTwc0T-yw', categoria: 'Futebol', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3' }
+  { id: 14, titulo: 'Live It Up', artista: 'Nicky Jam ft. Will Smith & Era Istrefi', capaUrl: 'https://i.ytimg.com/vi/_OYs3mecLQc/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGDMgWCh_MA8=&rs=AOn4CLAxyU6NwD5AMfA0Qkhp6TTwc0T-yw', categoria: 'Futebol', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3' },
+
+  // Rock Clássico (novo)
+  { id: 15, titulo: 'Bohemian Rhapsody', artista: 'Queen', capaUrl: 'https://akamai.sscdn.co/uploadfile/letras/fotos/e/8/4/7/e847e9d573d628bfc8e9a276d88bdb9d.jpg', categoria: 'Rock Clássico', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3' },
+  { id: 16, titulo: 'We Will Rock You', artista: 'Queen', capaUrl: 'https://akamai.sscdn.co/uploadfile/letras/fotos/e/8/4/7/e847e9d573d628bfc8e9a276d88bdb9d.jpg', categoria: 'Rock Clássico', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3' },
+
+  // Rap Nacional (novo)
+  { id: 17, titulo: 'Vida Loka Pt. 1', artista: 'Racionais MC\'s', capaUrl: 'https://wallpaperaccess.com/full/5652592.jpg', categoria: 'Rap Nacional', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3' },
+  { id: 18, titulo: 'Vida Loka Pt. 2', artista: 'Racionais MC\'s', capaUrl: 'https://wallpaperaccess.com/full/5652592.jpg', categoria: 'Rap Nacional', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-11.mp3' },
+  { id: 19, titulo: 'Negro Drama', artista: 'Racionais MC\'s', capaUrl: 'https://wallpaperaccess.com/full/5652592.jpg', categoria: 'Rap Nacional', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-12.mp3' },
+  { id: 20, titulo: 'Jesus Chorou', artista: 'Racionais MC\'s', capaUrl: 'https://wallpaperaccess.com/full/5652592.jpg', categoria: 'Rap Nacional', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-13.mp3' },
+  { id: 21, titulo: 'Capítulo 4, Versículo 3', artista: 'Racionais MC\'s', capaUrl: 'https://wallpaperaccess.com/full/5652592.jpg', categoria: 'Rap Nacional', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-14.mp3' },
+
+  // Observação: 'Ninguém Explica Deus' já existe (id:9) — não foi duplicada
+
+  // Gospel / Música Cristã (adições)
+  { id: 22, titulo: 'Me Deixe Aqui', artista: 'Gabriela Rocha', capaUrl: 'https://tse3.mm.bing.net/th/id/OIP.z1TkX01XqsUOBoeajGFLfwHaF7?rs=1&pid=ImgDetMain&o=7&rm=3', categoria: 'Gospel / Música Cristã', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-15.mp3' },
+  { id: 23, titulo: 'És Tudo Pra Mim', artista: 'Eli Soares', capaUrl: 'https://cdn.comunhao.com.br/wp-content/uploads/2022/10/04134753/Eli_Soares-1068x713.jpg', categoria: 'Gospel / Música Cristã', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-16.mp3' },
+  { id: 24, titulo: 'A Casa é Sua', artista: 'Casa Worship', capaUrl: 'https://th.bing.com/th/id/R.8f88a95fa709df22e532630a903e2d12?rik=Fw%2fUbDPjmmrkcw&pid=ImgRaw&r=0', categoria: 'Gospel / Música Cristã', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-17.mp3' },
+  { id: 25, titulo: 'Meu Amanhã', artista: 'Eli Soares', capaUrl: 'https://cdn.comunhao.com.br/wp-content/uploads/2022/10/04134753/Eli_Soares-1068x713.jpg', categoria: 'Gospel / Música Cristã', src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-18.mp3' }
 ];
 
 // Categorias derivadas automaticamente
@@ -28,6 +47,9 @@ const musicasPop = musicas.filter(m => m.categoria === 'Pop & R&B');
 const musicasRap = musicas.filter(m => m.categoria === 'Rap & Trap');
 const musicasGospel = musicas.filter(m => m.categoria === 'Gospel / Música Cristã');
 const musicasFutebol = musicas.filter(m => m.categoria === 'Futebol');
+// novos filtros para as categorias adicionadas
+const musicasRock = musicas.filter(m => m.categoria === 'Rock Clássico');
+const musicasRapNacional = musicas.filter(m => m.categoria === 'Rap Nacional');
 const todasMusicas = musicas.slice();
 
 // Estado
@@ -192,7 +214,8 @@ function aplicarEventosAosCards(container){
 // Função para renderizar favoritos em seção dedicada
 function renderizarFavoritos(){
   const favContainer = document.getElementById('lista-de-favoritos');
-  const listaFav = musicas.concat(musicasFutebol).filter(m => favoritos.includes(m.id));
+  // usar todasMusicas (contém todas as entradas) para evitar duplicações/omissões
+  const listaFav = todasMusicas.filter(m => favoritos.includes(m.id));
   if(listaFav.length === 0){ favContainer.innerHTML = '<p>Nenhum favorito ainda.</p>'; return; }
   favContainer.innerHTML = '';
   listaFav.forEach((m, index) => {
@@ -217,7 +240,8 @@ function toggleFavorito(id, btn){
 // Busca em tempo real
 function aplicarFiltro(texto){
   const t = texto.toLowerCase();
-  const combinadas = musicas.concat(musicasFutebol);
+  // usar todasMusicas para pesquisar em todas as categorias incluindo as novas
+  const combinadas = todasMusicas;
   const filtradas = combinadas.filter(m => m.titulo.toLowerCase().includes(t) || m.artista.toLowerCase().includes(t));
   renderizarMusicas(filtradas);
 }
@@ -298,6 +322,9 @@ function init(){
   renderCarrossel();
   renderCategoria(musicasPop, 'lista-pop');
   renderCategoria(musicasRap, 'lista-rap');
+  // renderizar Rap Nacional e Rock Clássico nas novas seções
+  renderCategoria(musicasRapNacional, 'lista-rap-nacional');
+  renderCategoria(musicasRock, 'lista-rock');
   renderCategoria(musicasGospel, 'lista-gospel');
   renderCategoria(musicasFutebol, 'lista-futebol');
   renderarTodasEFavoritos();
